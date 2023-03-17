@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Online Store</title>
+
+	<!-- Bootstrap 5 CSS -->
+	<link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css" />
+
+	<!-- Custom CSS -->
+	<style type="text/css">
+		@import url("assets/css/style.css");
+	</style>
+
+	<link rel="shortcut icon" href="assets/img/shopping-cart-solid.svg" type="image/x-icon">
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="preloader-inner">
+			<div class="preloader-icon">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!-- Preloader -->
+
+	<!-- Header -->
+	<header class="header">
+		<div class="topbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-12">
+						<div class="top-left">
+							<ul class="list-main">
+								<li><i class="fas fa-phone-alt"></i></i> +389 (0)X XXX XXX</li>
+								<li><i class="far fa-envelope"></i></i> support@onlinestore.com</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-12">
+						<div class="right-content">
+							<ul class="list-main">
+								<li><i class="fas fa-map-marker-alt"></i> <a href="#"> Store location</a></li>
+								<li><i class="fas fa-stopwatch"></i> <a href="#"> Daily deal</a></li>
+								<li><i class="fas fa-user"></i> <a href="#"> My account</a></li>
+								<li><i class="fas fa-power-off"></i><a href="login.html"> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light header-inner">
+			<div class="container">
+				<a class="navbar-brand" href="#">Online <span>Store</span></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Shop
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="shop.html">All products</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="men's-apparel.html">Men</a></li>
+								<li><a class="dropdown-item" href="women's-apparel.html">Women</a></li>
+								<li><a class="dropdown-item" href="kids'-apparel.html">Kids</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="sale.html">Sale</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="blog.html">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contact</a>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+					</form>
+					<div class="d-flex ms-md-5 justify-content-around socials">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="slogan-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10">
+						<p class="slogan">The best of both worlds. Store and web.</p>
+					</div>
+					<div class="col-md-2 d-flex align-items-center justify-content-center">
+						<ul class="navbar-user">
+							<li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+							<li class="checkout">
+								<a href="cart.html">
+									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+									<span id="checkout-items" class="checkout-items">2</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- /Header -->
+
+	<!-- Main -->
+	<main>
+
+		<div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="w-100 pt-1 mb-5 text-right">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<form action="" method="get" class="modal-content modal-body border-0 p-0">
+					<div class="input-group mb-2">
+						<input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+						<button type="submit" class="input-group-text bg-success text-light">
+							<i class="fa fa-fw fa-search text-white"></i>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<section class="bg-success py-5">
+			<div class="container">
+				<div class="row align-items-center py-5">
+					<div class="col-md-8 text-white">
+						<h1>ABOUT US</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum explicabo aut sequi possimus!
+							Architecto iste explicabo magni modi quaerat quibusdam soluta minus! Aspernatur nobis ex
+							molestiae debitis nulla nostrum earum quam, pariatur harum quod voluptatem maiores quibusdam
+							vitae corrupti voluptas repudiandae quaerat eveniet repellat laboriosam nihil recusandae
+							officiis temporibus velit.
+						</p>
+					</div>
+					<div class="col-md-4 d-flex justify-content-center align-items-center">
+						<img class="img-fluid" src="assets/img/il-ecommerce.svg" alt="About Hero">
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="container py-5">
+			<div class="row text-center pt-5 pb-3">
+				<div class="col-lg-6 m-auto">
+					<h1 class="h1">OUR SERVICES</h1>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus eligendi veniam nemo vitae
+						modi illum?
+					</p>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-6 col-lg-3 pb-5">
+					<div class="h-100 py-5 services-icon-wap shadow">
+						<div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
+						<h2 class="h5 mt-4 text-center">Delivery Services</h2>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-3 pb-5">
+					<div class="h-100 py-5 services-icon-wap shadow">
+						<div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
+						<h2 class="h5 mt-4 text-center">Shipping & Return</h2>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-3 pb-5">
+					<div class="h-100 py-5 services-icon-wap shadow">
+						<div class="h1 text-success text-center"><i class="fa fa-percent"></i></div>
+						<h2 class="h5 mt-4 text-center">Promotion</h2>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-3 pb-5">
+					<div class="h-100 py-5 services-icon-wap shadow">
+						<div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
+						<h2 class="h5 mt-4 text-center">24 Hours Service</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="bg-light py-5">
+			<div class="container my-4">
+				<div class="row text-center py-3">
+					<div class="col-lg-6 m-auto">
+						<h1 class="h1">OUR BRANDS</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim in fugiat mollitia et
+							temporibus!
+						</p>
+					</div>
+					<div class="col-lg-9 m-auto tempaltemo-carousel">
+						<div class="row d-flex flex-row">
+
+							<div class="col-1 align-self-center">
+								<a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev">
+									<i class="fas fa-chevron-left"></i>
+								</a>
+							</div>
+
+
+
+							<div class="col">
+								<div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="templatemo-slide-brand"
+									data-bs-ride="carousel">
+
+									<div class="carousel-inner product-links-wap" role="listbox">
+
+
+										<div class="carousel-item active">
+											<div class="row">
+												<div
+													class="col-3 p-md-5 d-flex justify-content-center align-items-center">
+													<a href="#"><img class="img-fluid brand-img"
+															src="assets/img/brand-1.png" alt="Brand Logo"></a>
+												</div>
+												<div
+													class="col-3 p-md-5 d-flex justify-content-center align-items-center">
+													<a href="#"><img class="img-fluid brand-img"
+															src="assets/img/brand-2.svg" alt="Brand Logo"></a>
+												</div>
+												<div
+													class="col-3 p-md-5 d-flex justify-content-center align-items-center">
+													<a href="#"><img class="img-fluid brand-img"
+															src="assets/img/brand-3.png" alt="Brand Logo"></a>
+												</div>
+												<div
+													class="col-3 p-md-5 d-flex justify-content-center align-items-center">
+													<a href="#"><img class="img-fluid brand-img"
+															src="assets/img/brand-4.png" alt="Brand Logo"></a>
+												</div>
+											</div>
+										</div>
+
+
+
+										<div class="carousel-item">
+											<div class="row">
+												<div
+													class="col-3 p-md-5 d-flex justify-content-center align-items-center">
+													<a href="#"><img class="img-fluid brand-img"
+															src="assets/img/brand-5.png" alt="Brand Logo"></a>
+												</div>
+												<div
+													class="col-3 p-md-5 d-flex justify-content-center align-items-center">
+													<a href="#"><img class="img-fluid brand-img"
+															src="assets/img/brand-6.png" alt="Brand Logo"></a>
+												</div>
+												<div
+													class="col-3 p-md-5 d-flex justify-content-center align-items-center">
+													<a href="#"><img class="img-fluid brand-img"
+															src="assets/img/brand-7.svg" alt="Brand Logo"></a>
+												</div>
+												<div
+													class="col-3 p-md-5 d-flex justify-content-center align-items-center">
+													<a href="#"><img class="img-fluid brand-img"
+															src="assets/img/brand-8.png" alt="Brand Logo"></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+
+								</div>
+							</div>
+
+
+
+							<div class="col-1 align-self-center">
+								<a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next">
+									<i class="fas fa-chevron-right"></i>
+								</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div class="slogan-container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<p class="slogan" style="text-align: center;">Your gateway to great shopping.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<!-- Main -->
+
+	<!-- Footer -->
+	<footer class="bg-light py-3 mt-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 d-flex flex-column justify-content-around">
+					<h3>Download Our App</h3>
+					<p>Download App for Android and IOS mobile phone.</p>
+					<div class="app-logo d-flex justify-content-md-around align-items-center">
+						<a href="#"><img src="./images/play-store.png" alt="Logo of Play Store" class="img-fluid" /></a>
+						<a href="#"><img src="./images/app-store.png" alt="Logo of App Store" class="img-fluid" /></a>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex flex-column justify-content-around">
+					<h3 class="brand-logo">Online <span>Store</span></h3>
+					<p>Grow your image with your clothes.<br />Go Shopping.</p>
+				</div>
+				<div class="col-md-2 col-6 d-flex flex-column justify-content-around">
+					<h4>Useful Links</h3>
+						<ul>
+							<li><a href="#">Coupons</a></li>
+							<li><a href="#">Blog Post</a></li>
+							<li><a href="#">Return Policy</a></li>
+							<li><a href="#">Join Affiliate</a></li>
+						</ul>
+				</div>
+				<div class="col-md-2 col-6 d-flex flex-column justify-content-around">
+					<h4>Follow Us</h3>
+						<ul>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Instagram</a></li>
+							<li><a href="#">YouTube</a></li>
+						</ul>
+				</div>
+			</div>
+			<hr />
+			<p class="copyright">&copy; Copyright 2021. All rights reserved.</p>
+		</div>
+	</footer>
+	<!-- /Footer -->
+
+	<!-- Popper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+
+	<!-- Bootstrap 5 JS -->
+	<script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+
+	<!-- jQuery JS -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+	<!-- Font Awesome JS -->
+	<script src="https://kit.fontawesome.com/a0e379122a.js" crossorigin="anonymous"></script>
+
+	<!-- Custom JavaScript -->
+	<script src="./assets/js/main.js"></script>
+
+	<!-- Isotope JS File -->
+	<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+
+</body>
+
+</html>

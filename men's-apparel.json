@@ -1,0 +1,95 @@
+[
+    {
+      "id": 1,
+      "category": "jackets",
+      "name": "Man's Black Leather Jacket",
+      "rating": 4,
+      "image": "./images/product-1.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Medium",
+        "Large",
+        "XL"
+      ],
+      "condition": "new",
+      "color": "black",
+      "price": 519.99,
+      "discount": 80.00
+    },
+    {
+      "id": 3,
+      "category": "coats",
+      "name": "Men's Casual Orange Coat",
+      "rating": 5,
+      "image": "./images/product-3.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Medium",
+        "Large",
+        "XL",
+        "XXL"
+      ],
+      "condition": "new",
+      "color": "orange",
+      "price": 719.99,
+      "discount": 0
+    },
+    {
+      "id": 4,
+      "category": "pullovers",
+      "name": "Men's Catchy Pullover",
+      "rating": 4,
+      "image": "./images/product-4.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Medium",
+        "Large",
+        "XL",
+        "XXL"
+      ],
+      "condition": "new",
+      "color": "grey",
+      "price": 219.99,
+      "discount": 0
+    },
+    {
+      "id": 6,
+      "category": "shirts",
+      "name": "Men's Slim Fit Casual Shirt",
+      "rating": 3,
+      "image": "./images/product-6.jpg",
+      "description": "...",
+      "available": false,
+      "size": [
+        "Medium",
+        "Large",
+        "XL"
+      ],
+      "condition": "used",
+      "color": "white",
+      "price": 79.99,
+      "discount": 20
+    },
+    {
+      "id": 11,
+      "category": "coats",
+      "name": "Men's Vintage Brown Coat",
+      "rating": 3,
+      "image": "./images/product-11.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Medium",
+        "Large",
+        "XL",
+        "XXL"
+      ],
+      "condition": "used",
+      "color": "brown",
+      "price": 399.99,
+      "discount": 0
+    }
+]

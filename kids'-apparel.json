@@ -1,0 +1,93 @@
+[
+    {
+      "id": 9,
+      "category": "shirts",
+      "name": "Kids' Hawaii Floral Shirt",
+      "rating": 1,
+      "image": "./images/product-9.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "condition": "new",
+      "color": "green",
+      "price": 79.99,
+      "discount": 0
+    },
+    {
+      "id": 10,
+      "category": "dresses",
+      "name": "Kids' Cute Brown Dress",
+      "rating": 5,
+      "image": "./images/product-10.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "XS",
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "condition": "new",
+      "color": "brown",
+      "price": 189.99,
+      "discount": 0
+    },
+    {
+      "id": 12,
+      "category": "dresses",
+      "name": "Kids' Vintage Orange Dress",
+      "rating": 5,
+      "image": "./images/product-12.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "XS",
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "condition": "new",
+      "color": "orange",
+      "price": 389.99,
+      "discount": 0
+    },
+    {
+      "id": 14,
+      "category": "dresses",
+      "name": "Kids' Vintage Red Dress",
+      "rating": 4,
+      "image": "./images/product-14.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Small",
+        "Medium"
+      ],
+      "condition": "collectible",
+      "color": "red",
+      "price": 379.99,
+      "discount": 0
+    },
+    {
+      "id": 15,
+      "category": "pullovers",
+      "name": "Kids' Catchy Pink Pullover",
+      "rating": 4,
+      "image": "./images/product-15.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "condition": "collectible",
+      "color": "pink",
+      "price": 239.99,
+      "discount": 0
+    }
+  ]

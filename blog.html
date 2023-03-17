@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Store</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css" />
+
+    <!-- Custom CSS -->
+    <style type="text/css">
+        @import url("assets/css/style.css");
+    </style>
+
+    <link rel="shortcut icon" href="assets/img/shopping-cart-solid.svg" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader -->
+
+    <!-- Header -->
+    <header class="header">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="top-left">
+                            <ul class="list-main">
+                                <li><i class="fas fa-phone-alt"></i></i> +389 (0)X XXX XXX</li>
+                                <li><i class="far fa-envelope"></i></i> support@onlinestore.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="right-content">
+                            <ul class="list-main">
+                                <li><i class="fas fa-map-marker-alt"></i> <a href="#"> Store location</a></li>
+                                <li><i class="fas fa-stopwatch"></i> <a href="#"> Daily deal</a></li>
+                                <li><i class="fas fa-user"></i> <a href="#"> My account</a></li>
+                                <li><i class="fas fa-power-off"></i><a href="login.html"> Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light header-inner">
+            <div class="container">
+                <a class="navbar-brand" href="#">Online <span>Store</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Shop
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="shop.html">All products</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="men's-apparel.html">Men</a></li>
+                                <li><a class="dropdown-item" href="women's-apparel.html">Women</a></li>
+                                <li><a class="dropdown-item" href="kids'-apparel.html">Kids</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="sale.html">Sale</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="d-flex ms-md-5 justify-content-around socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="slogan-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <p class="slogan">The best of both worlds. Store and web.</p>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center justify-content-center">
+                        <ul class="navbar-user">
+                            <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <li class="checkout">
+                                <a href="cart.html">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span id="checkout-items" class="checkout-items">2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main -->
+    <main>
+        <!-- Start Blog Single -->
+        <section class="blog-single section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <div class="blog-single-main">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="image">
+                                        <img src="assets/img/blog-post.jpg" alt="#">
+                                    </div>
+                                    <div class="blog-detail">
+                                        <h2 class="blog-title">Why You Will Love Our <span class="brand-logo"> Online
+                                                <span>Store </span></span> ?</h2>
+                                        <div class="blog-meta">
+                                            <span class="author"><a href="#"><i class="fa fa-user"></i>By Admin</a><a
+                                                    href="#"><i class="fa fa-calendar"></i>Dec 24, 2018</a><a
+                                                    href="#"><i class="fa fa-comments"></i>Comments (15)</a></span>
+                                        </div>
+                                        <div class="content">
+                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ullam
+                                                distinctio laborum doloribus? Minima repellat necessitatibus cum enim
+                                                nihil eum voluptates dicta corrupti, nemo, perspiciatis qui tempora
+                                                fugiat, pariatur incidunt dolore magnam. Saepe, architecto! Odio iure
+                                                nostrum reiciendis harum, perspiciatis architecto mollitia in quo
+                                                numquam quisquam vitae adipisci. Laudantium, ea.</p>
+                                            <blockquote> <i class="fa fa-quote-left"></i> Lorem, ipsum dolor sit amet
+                                                consectetur adipisicing elit. Similique ullam
+                                                distinctio laborum doloribus? Minima repellat necessitatibus cum enim
+                                                nihil eum voluptates dicta corrupti, nemo, perspiciatis qui tempora
+                                                fugiat, pariatur incidunt dolore magnam. Saepe, architecto! Odio iure
+                                                nostrum reiciendis harum, perspiciatis architecto mollitia in quo
+                                                numquam quisquam vitae adipisci. Laudantium, ea.</blockquote>
+                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ullam
+                                                distinctio laborum doloribus? Minima repellat necessitatibus cum enim
+                                                nihil eum voluptates dicta corrupti, nemo, perspiciatis qui tempora
+                                                fugiat, pariatur incidunt dolore magnam. Saepe, architecto! Odio iure
+                                                nostrum reiciendis harum, perspiciatis architecto mollitia in quo
+                                                numquam quisquam vitae adipisci. Laudantium, ea.</p>
+                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ullam
+                                                distinctio laborum doloribus? Minima repellat necessitatibus cum enim
+                                                nihil eum voluptates dicta corrupti, nemo, perspiciatis qui tempora
+                                                fugiat, pariatur incidunt dolore magnam. Saepe, architecto! Odio iure
+                                                nostrum reiciendis harum, perspiciatis architecto mollitia in quo
+                                                numquam quisquam vitae adipisci. Laudantium, ea.</p>
+                                        </div>
+                                    </div>
+                                    <div class="share-social">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="content-tags">
+                                                    <h4>Tags:</h4>
+                                                    <ul class="tag-inner">
+                                                        <li><a href="#">Coats</a></li>
+                                                        <li><a href="#">Pants</a></li>
+                                                        <li><a href="#">Shirts</a></li>
+                                                        <li><a href="#">Pullovers</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="comments">
+                                        <h3 class="comment-title">Comments (3)</h3>
+                                        <!-- Single Comment -->
+                                        <div class="single-comment">
+                                            <img src="assets/img/user-1.png" alt="#">
+                                            <div class="content">
+                                                <h4>Alisa Harm <span>Feb 28, 2018 at 8:59 PM</span></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum iste,
+                                                    deleniti nostrum sapiente pariatur exercitationem sed blanditiis
+                                                    veritatis sunt ipsum vero. Autem blanditiis quasi eligendi, dolore
+                                                    consectetur facilis nihil. Veritatis.</p>
+                                                <div class="button">
+                                                    <a href="#" class="btn"><i class="fa fa-reply"
+                                                            aria-hidden="true"></i>Reply</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="single-comment left">
+                                            <img src="assets/img/user-2.png" alt="#">
+                                            <div class="content">
+                                                <h4>John Deo <span>Feb 28, 2018 at 8:59 PM</span></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum iste,
+                                                    deleniti nostrum sapiente pariatur exercitationem sed blanditiis
+                                                    veritatis sunt ipsum vero. Autem blanditiis quasi eligendi, dolore
+                                                    consectetur facilis nihil. Veritatis.</p>
+                                                <div class="button">
+                                                    <a href="#" class="btn"><i class="fa fa-reply"
+                                                            aria-hidden="true"></i>Reply</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="single-comment">
+                                            <img src="assets/img/user-3.png" alt="#">
+                                            <div class="content">
+                                                <h4>Megan Mart <span>Feb 28, 2018 at 8:59 PM</span></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum iste,
+                                                    deleniti nostrum sapiente pariatur exercitationem sed blanditiis
+                                                    veritatis sunt ipsum vero. Autem blanditiis quasi eligendi, dolore
+                                                    consectetur facilis nihil. Veritatis.</p>
+                                                <div class="button">
+                                                    <a href="#" class="btn"><i class="fa fa-reply"
+                                                            aria-hidden="true"></i>Reply</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="reply">
+                                        <div class="reply-head">
+                                            <h2 class="reply-title">Leave a Comment</h2>
+
+                                            <form class="form" action="#">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-12">
+                                                        <div class="form-group">
+                                                            <label>Your Name<span>*</span></label>
+                                                            <input type="text" name="name" placeholder=""
+                                                                required="required">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-12">
+                                                        <div class="form-group">
+                                                            <label>Your Email<span>*</span></label>
+                                                            <input type="email" name="email" placeholder=""
+                                                                required="required">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label>Your Message<span>*</span></label>
+                                                            <textarea name="message" placeholder=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group button">
+                                                            <button type="submit" class="btn green-button"><a
+                                                                    href="#">Post comment</a></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="main-sidebar">
+
+                            <div class="single-widget category">
+                                <h3 class="title">Shop Categories</h3>
+                                <ul class="categor-list">
+                                    <li><a href="men's-apparel.html">Men's Apparel</a></li>
+                                    <li><a href="women's-apparel.html">Women's Apparel</a></li>
+                                    <li><a href="kids'-apparel.html">Kids' Apparel</a></li>
+                                </ul>
+                            </div>
+
+
+                            <div class="single-widget recent-post">
+                                <h3 class="title">Recent posts</h3>
+
+                                <div class="single-post">
+                                    <div class="image">
+                                        <img src="images/product-1.jpg" alt="#">
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">Top 10 Leather Jackets in the World</a></h5>
+                                        <ul class="comment">
+                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>June 27, 2021</li>
+                                            <li><i class="fa fa-commenting-o" aria-hidden="true"></i>35</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="single-post">
+                                    <div class="image">
+                                        <img src="images/product-10.jpg" alt="#">
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">Top 10 Summer Kids' Dresses in the World</a></h5>
+                                        <ul class="comment">
+                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>March 05, 2020</li>
+                                            <li><i class="fa fa-commenting-o" aria-hidden="true"></i>59</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="single-post">
+                                    <div class="image">
+                                        <img src="images/product-11.jpg" alt="#">
+                                    </div>
+                                    <div class="content">
+                                        <h5><a href="#">Top 10 Vintage Men Coats in the World</a></h5>
+                                        <ul class="comment">
+                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>June 09, 2019</li>
+                                            <li><i class="fa fa-commenting-o" aria-hidden="true"></i>44</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="single-widget side-tags">
+                                <h3 class="title">Tags</h3>
+                                <ul class="tag">
+                                    <li><a href="#">Fashion</a></li>
+                                    <li><a href="#">Men</a></li>
+                                    <li><a href="#">Women</a></li>
+                                    <li><a href="#">Kids</a></li>
+                                    <li><a href="#">Clothes</a></li>
+                                    <li><a href="#">Online Store</a></li>
+                                </ul>
+                            </div>
+
+
+                            <div class="single-widget newsletter">
+                                <h3 class="title">Newsletter</h3>
+                                <div class="letter-inner">
+                                    <h4>Subscribe & get <br> latest updates.</h4>
+                                    <div class="form-inner">
+                                        <input type="email" placeholder="Enter your email">
+                                        <a href="#">Submit</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Main -->
+
+    <!-- Footer -->
+    <footer class="bg-light py-3 mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex flex-column justify-content-around">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and IOS mobile phone.</p>
+                    <div class="app-logo d-flex justify-content-md-around align-items-center">
+                        <a href="#"><img src="./images/play-store.png" alt="Logo of Play Store" class="img-fluid" /></a>
+                        <a href="#"><img src="./images/app-store.png" alt="Logo of App Store" class="img-fluid" /></a>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex flex-column justify-content-around">
+                    <h3 class="brand-logo">Online <span>Store</span></h3>
+                    <p>Grow your image with your clothes.<br />Go Shopping.</p>
+                </div>
+                <div class="col-md-2 col-6 d-flex flex-column justify-content-around">
+                    <h4>Useful Links</h3>
+                        <ul>
+                            <li><a href="#">Coupons</a></li>
+                            <li><a href="#">Blog Post</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Join Affiliate</a></li>
+                        </ul>
+                </div>
+                <div class="col-md-2 col-6 d-flex flex-column justify-content-around">
+                    <h4>Follow Us</h3>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                </div>
+            </div>
+            <hr />
+            <p class="copyright">&copy; Copyright 2021. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/a0e379122a.js" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Isotope JS File -->
+    <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+
+</body>
+
+</html>

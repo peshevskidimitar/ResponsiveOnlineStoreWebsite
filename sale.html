@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Store</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css" />
+
+    <!-- Custom CSS -->
+    <style type="text/css">
+        @import url("assets/css/style.css");
+    </style>
+
+    <link rel="shortcut icon" href="assets/img/shopping-cart-solid.svg" type="image/x-icon">
+
+    <style>
+        .loader-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            z-index: 998;
+        }
+
+        .loader-overlay .preloader-wrapper {
+            position: fixed;
+            top: 50%;
+        }
+    </style>
+
+    <style type="text/css">
+        /* Chart.js */
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader -->
+
+    <!-- Header -->
+    <header class="header">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="top-left">
+                            <ul class="list-main">
+                                <li><i class="fas fa-phone-alt"></i></i> +389 (0)X XXX XXX</li>
+                                <li><i class="far fa-envelope"></i></i> support@onlinestore.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="right-content">
+                            <ul class="list-main">
+                                <li><i class="fas fa-map-marker-alt"></i> <a href="#"> Store location</a></li>
+                                <li><i class="fas fa-stopwatch"></i> <a href="#"> Daily deal</a></li>
+                                <li><i class="fas fa-user"></i> <a href="#"> My account</a></li>
+                                <li><i class="fas fa-power-off"></i><a href="login.html"> Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light header-inner">
+            <div class="container">
+                <a class="navbar-brand" href="#">Online <span>Store</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Shop
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="shop.html">All products</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="men's-apparel.html">Men</a></li>
+                                <li><a class="dropdown-item" href="women's-apparel.html">Women</a></li>
+                                <li><a class="dropdown-item" href="kids'-apparel.html">Kids</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="sale.html">Sale</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="d-flex ms-md-5 justify-content-around socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="slogan-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <p class="slogan">The best of both worlds. Store and web.</p>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center justify-content-center">
+                        <ul class="navbar-user">
+                            <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <li class="checkout">
+                                <a href="cart.html">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span id="checkout-items" class="checkout-items">2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main -->
+    <main>
+        <div class="container">
+
+
+            <div class="row mt-5">
+
+
+                <div class="col-md-4 mb-4">
+
+
+                    <section>
+
+
+                        <section class="filters">
+                            <h5 style="font-size: 1.375rem; color: #136153; padding: 5px 20px;">Filters</h5>
+
+                            <div class="accordion accordion-flush mb-3">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                            aria-controls="panelsStayOpen-collapseOne">
+                                            Category
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="panelsStayOpen-headingOne">
+                                        <div class="accordion-body">
+
+                                            <section filter="category">
+
+                                                <div class="d-flex flex-md-column justify-content-around flex-wrap">
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input type="checkbox"
+                                                            class="form-check-input filter-option form-check-input filled-in"
+                                                            category="jackets" id="jackets">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="jackets">Jackets</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input category="tops" type="checkbox"
+                                                            class="filter-option form-check-input filled-in" id="tops">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="tops">Tops</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input category="coats" type="checkbox"
+                                                            class="filter-option form-check-input filled-in" id="coats">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="coats">Coats</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3 pb-1">
+                                                        <input category="pullovers" type="checkbox"
+                                                            class="filter-option form-check-input filled-in"
+                                                            id="pullovers">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="pullovers">Pullovers</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3 pb-1">
+                                                        <input category="shirts" type="checkbox"
+                                                            class="filter-option form-check-input filled-in"
+                                                            id="shirts">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="shirts">Shirts</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 pb-1">
+                                                        <input category="dresses" type="checkbox"
+                                                            class="filter-option form-check-input filled-in"
+                                                            id="dresses">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="dresses">Dresses</label>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            Condition
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingTwo">
+                                        <div class="accordion-body">
+
+                                            <section filter="condition">
+                                                <div class="d-flex flex-md-column justify-content-around flex-wrap">
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input type="checkbox"
+                                                            class="form-check-input filter-option form-check-input filled-in"
+                                                            condition="new" id="new">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="new">New</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input condition="used" type="checkbox"
+                                                            class="filter-option form-check-input filled-in" id="used">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="used">Used</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input condition="collectible" type="checkbox"
+                                                            class="filter-option form-check-input filled-in"
+                                                            id="collectible">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="collectible">Collectible</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 pb-1">
+                                                        <input condition="renewed" type="checkbox"
+                                                            class="filter-option form-check-input filled-in"
+                                                            id="renewed">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="renewed">Renewed</label>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                            Rating
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingThree">
+                                        <div class="accordion-body">
+
+                                            <section filter="rating" class="exclude">
+                                                <label for="customer-rating-4" class="z-depth-0 py-0">
+                                                    <ul class="rating waves-light mb-0 waves-effect waves-light">
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <p class="small text-uppercase card-link-secondary px-2">
+                                                                &amp; Up
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <input id="customer-rating-4" class="filter-option" type="checkbox"
+                                                        rating="4">
+                                                </label>
+                                                <br>
+                                                <label for="customer-rating-3" class="z-depth-0 py-0">
+                                                    <ul class="rating waves-light mb-0 waves-effect waves-light">
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <p class="small text-uppercase card-link-secondary px-2">
+                                                                &amp; Up
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <input id="customer-rating-3" class="filter-option" type="checkbox"
+                                                        rating="3">
+                                                </label>
+                                                <br>
+                                                <label for="customer-rating-2" class="z-depth-0 py-0">
+                                                    <ul class="rating waves-light mb-0 waves-effect waves-light">
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <p class="small text-uppercase card-link-secondary px-2">
+                                                                &amp; Up
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <input id="customer-rating-2" class="filter-option" type="checkbox"
+                                                        rating="2">
+                                                </label>
+                                                <br>
+                                                <label for="customer-rating-1" class="z-depth-0 py-0">
+                                                    <ul class="rating waves-light mb-0 waves-effect waves-light">
+                                                        <li>
+                                                            <i class="fas fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="far fa-star fa-sm text-primary"></i>
+                                                        </li>
+                                                        <li>
+                                                            <p class="small text-uppercase card-link-secondary px-2">
+                                                                &amp; Up
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <input id="customer-rating-1" class="filter-option" type="checkbox"
+                                                        rating="1">
+                                                </label>
+
+                                            </section>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                            Price
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingFour">
+                                        <div class="accordion-body">
+
+                                            <section filter="price">
+                                                <div class="d-flex flex-md-column justify-content-around flex-wrap">
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input price="0-25" type="radio"
+                                                            class="filter-option form-check-input" id="under25"
+                                                            name="materialExampleRadios">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="under25">Under $25</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input price="25-50" type="radio"
+                                                            class="filter-option form-check-input" id="2550"
+                                                            name="materialExampleRadios">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="2550">$25 to $50</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input price="50-100" type="radio"
+                                                            class="filter-option form-check-input" id="50100"
+                                                            name="materialExampleRadios">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="50100">$50 to $100</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input price="100-200" type="radio"
+                                                            class="filter-option form-check-input" id="100200"
+                                                            name="materialExampleRadios">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="100200">$100 to $200</label>
+                                                    </div>
+                                                    <div class="form-check pl-0">
+                                                        <input price="200-*" type="radio"
+                                                            class="filter-option form-check-input" id="200above"
+                                                            name="materialExampleRadios">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="200above">$200 &amp; Above</label>
+                                                    </div>
+                                                </div>
+
+                                            </section>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                            Size
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingFive">
+                                        <div class="accordion-body">
+
+                                            <section filter="size">
+                                                <div class="d-flex flex-md-column justify-content-around flex-wrap">
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input size="XS" type="checkbox"
+                                                            class="filter-option form-check-input filled-in" id="XS">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="XS">XS</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input size="Small" type="checkbox"
+                                                            class="filter-option form-check-input filled-in" id="Small">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="Small">Small</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input size="Medium" type="checkbox"
+                                                            class="filter-option form-check-input filled-in"
+                                                            id="Medium">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="Medium">Medium</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input size="Large" type="checkbox"
+                                                            class="filter-option form-check-input filled-in" id="Large">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="Large">Large</label>
+                                                    </div>
+                                                    <div class="form-check pl-0 mb-3">
+                                                        <input size="XL" type="checkbox"
+                                                            class="filter-option form-check-input filled-in" id="XL">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="XL">XL</label>
+                                                    </div>
+                                                    <div class="form-check pl-0">
+                                                        <input size="XXL" type="checkbox"
+                                                            class="filter-option form-check-input filled-in" id="XXL">
+                                                        <label
+                                                            class="form-check-label small text-uppercase card-link-secondary"
+                                                            for="XXL">XXL</label>
+                                                    </div>
+                                                </div>
+
+                                            </section>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                                            Color
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingSix">
+                                        <div class="accordion-body">
+
+                                            <section filter="color" class="exclude">
+                                                <div class="btn-group btn-group-toggle btn-color-group d-block mt-n2 ml-n2"
+                                                    data-toggle="buttons">
+                                                    <label for="color-1"
+                                                        class="btn rounded-circle white border-inset-grey p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: white;">
+                                                        <input id="color-1" class="filter-option" type="checkbox"
+                                                            color="white">
+                                                    </label>
+                                                    <label for="color-2"
+                                                        class="btn rounded-circle grey p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: grey;">
+                                                        <input id="color-2" class="filter-option" type="checkbox"
+                                                            color="grey">
+                                                    </label>
+                                                    <label for="color-3"
+                                                        class="btn rounded-circle black p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: black;">
+                                                        <input id="color-3" class="filter-option" type="checkbox"
+                                                            color="black">
+                                                    </label>
+                                                    <label for="color-4"
+                                                        class="btn rounded-circle green p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: green;">
+                                                        <input id="color-4" class="filter-option" type="checkbox"
+                                                            color="green">
+                                                    </label>
+                                                    <label for="color-5"
+                                                        class="btn rounded-circle blue p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: blue;">
+                                                        <input id="color-5" class="filter-option" type="checkbox"
+                                                            color="blue">
+                                                    </label>
+                                                    <label for="color-6"
+                                                        class="btn rounded-circle purple p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: purple;">
+                                                        <input id="color-6" class="filter-option" type="checkbox"
+                                                            color="purple">
+                                                    </label>
+                                                    <label for="color-7"
+                                                        class="btn rounded-circle yellow p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: yellow;">
+                                                        <input id="color-7" class="filter-option" type="checkbox"
+                                                            color="yellow">
+                                                    </label>
+                                                    <label for="color-8"
+                                                        class="btn rounded-circle indigo p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: indigo;">
+                                                        <input id="color-8" class="filter-option" type="checkbox"
+                                                            color="indigo">
+                                                    </label>
+                                                    <label for="color-9"
+                                                        class="btn rounded-circle red p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: red;">
+                                                        <input id="color-9" class="filter-option" type="checkbox"
+                                                            color="red">
+                                                    </label>
+                                                    <label for="color-10"
+                                                        class="btn rounded-circle orange p-3 m-2 waves-effect waves-light"
+                                                        style="background-color: orange;">
+                                                        <input id="color-10" class="filter-option" type="checkbox"
+                                                            color="orange">
+                                                    </label>
+                                                </div>
+                                            </section>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <button class="btn green-button reset"><a href="sale.html">RESET FILTERS</a></button>
+
+                        </section>
+
+
+                    </section>
+
+
+                </div>
+
+
+
+                <div class="col-md-8 mb-4">
+
+
+                    <section class="mb-3">
+
+                        <div class="row d-flex justify-content-around align-items-center">
+                            <div class="col-12 col-md-3 text-left text-md-left">
+                                <a href="#" class="text-reset"><i class="fas fa-th-list fa-lg mr-1"></i></a>
+                                <a href="#" class="text-reset"><i class="fas fa-th-large fa-lg"></i></a>
+                            </div>
+                            <div class="col-12 col-md-5">
+                                <div class="d-flex flex-wrap">
+
+
+                                    <div class="select-outline position-relative w-100 my-md-0 my-3">
+                                        <div class="select-wrapper md-form md-outline">
+                                            <select id="sort" class="form-select md-form md-outline initialized">
+                                                <option value="1">Best rating</option>
+                                                <option value="2">Lowest price first</option>
+                                                <option value="3">Highest price first</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 text-center">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination pagination-circle justify-content-center float-md-right mb-0">
+                                        <li class="page-item"><a class="page-link waves-effect waves-effect"><i
+                                                    class="fas fa-chevron-left"></i></a></li>
+                                        <li class="page-item active"><a
+                                                class="page-link waves-effect waves-effect">1</a></li>
+                                        <li class="page-item"><a class="page-link waves-effect waves-effect">2</a></li>
+                                        <li class="page-item"><a class="page-link waves-effect waves-effect">3</a></li>
+                                        <li class="page-item"><a class="page-link waves-effect waves-effect"><i
+                                                    class="fas fa-chevron-right"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+
+                    <section>
+
+
+
+                        <div id="loader" class="loader-overlay preloader">
+                            <div class="preloader-inner">
+                                <div class="preloader-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row" id="products">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <div class="row d-flex justify-content-around align-items-center">
+                        <div class="col-12 col-md-3 text-left text-md-left">
+                            <a href="#" class="text-reset"><i class="fas fa-th-list fa-lg mr-1"></i></a>
+                            <a href="#" class="text-reset"><i class="fas fa-th-large fa-lg"></i></a>
+                        </div>
+                        <div class="col-12 col-md-5">
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination pagination-circle justify-content-center float-md-right mb-0">
+                                    <li class="page-item"><a class="page-link waves-effect waves-effect"><i
+                                                class="fas fa-chevron-left"></i></a></li>
+                                    <li class="page-item active"><a class="page-link waves-effect waves-effect">1</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link waves-effect waves-effect">2</a></li>
+                                    <li class="page-item"><a class="page-link waves-effect waves-effect">3</a></li>
+                                    <li class="page-item"><a class="page-link waves-effect waves-effect"><i
+                                                class="fas fa-chevron-right"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </main>
+    <!-- Main -->
+
+    <!-- Footer -->
+    <footer class="bg-light py-3 mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex flex-column justify-content-around">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and IOS mobile phone.</p>
+                    <div class="app-logo d-flex justify-content-md-around align-items-center">
+                        <a href="#"><img src="./images/play-store.png" alt="Logo of Play Store" class="img-fluid" /></a>
+                        <a href="#"><img src="./images/app-store.png" alt="Logo of App Store" class="img-fluid" /></a>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex flex-column justify-content-around">
+                    <h3 class="brand-logo">Online <span>Store</span></h3>
+                    <p>Grow your image with your clothes.<br />Go Shopping.</p>
+                </div>
+                <div class="col-md-2 col-6 d-flex flex-column justify-content-around">
+                    <h4>Useful Links</h3>
+                        <ul>
+                            <li><a href="#">Coupons</a></li>
+                            <li><a href="#">Blog Post</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Join Affiliate</a></li>
+                        </ul>
+                </div>
+                <div class="col-md-2 col-6 d-flex flex-column justify-content-around">
+                    <h4>Follow Us</h3>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                </div>
+            </div>
+            <hr />
+            <p class="copyright">&copy; Copyright 2021. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Isotope JS File -->
+    <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/a0e379122a.js" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Filters JavaScript -->
+    <script src="assets/js/filters.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(() => {
+
+            $(".mdb-select").materialSelect();
+
+            let filters = getFilters();
+
+            getProducts(filters);
+
+            $("#sort").change((e) => {
+                e.stopImmediatePropagation();
+                const property = e.target.value === '1' ? 'rating' : 'price';
+                const increase = e.target.value === '2'
+                getProducts(filters, property, increase);
+            });
+
+            $(".filter-option").change((e) => {
+                e.stopImmediatePropagation();
+                for (let filter of Object.keys(filters)) {
+                    if (e.target.attributes[filter]) {
+                        filters = updateFilters(
+                            filters,
+                            filter,
+                            e.target.attributes[filter].value,
+                            e.target.checked
+                        );
+                    }
+                }
+
+                getProducts(filters);
+
+            });
+        });
+
+        function getFilters() {
+            const filters = Array.from($("[filter]")).map(
+                (el) => el.attributes.filter.value
+            );
+            const dict = {};
+
+            filters.forEach((filter) => {
+                dict[filter] = [];
+            });
+
+            return dict;
+        }
+
+        function updateFilters(filters, filter, option, value) {
+            const dict = { ...filters };
+            if (filter === "price") {
+                dict.price = [option];
+            } else if (filter === "rating") {
+                dict.rating = [option];
+            } else if (value && filters[filter].indexOf(option) === -1)
+                dict[filter].push(option);
+            else if (!value)
+                dict[filter] = dict[filter].filter((entry) => entry !== option);
+
+            return dict;
+        }
+
+        function getProducts(filters, sortProperty = "rating", increase = false) {
+            $('#loader').css('display', 'flex');
+
+            $.get("sale.json", (products) => {
+                let productList;
+
+                productList = products.sort((a, b) => {
+                    if (a[sortProperty] === b[sortProperty]) return 0;
+                    if (increase ? a[sortProperty] > b[sortProperty] : a[sortProperty] < b[sortProperty])
+                        return 1;
+                    else return -1;
+                });
+
+                renderProducts(applyFilters(productList, filters));
+            })
+                .fail(() => {
+                    console.log("error");
+                    $('#loader').css('display', 'none');
+                    renderProducts([]);
+                });
+        }
+
+        function applyFilters(products, filters) {
+            return products.filter((product) => {
+                for (let filter of Object.keys(filters)) {
+                    if (filters[filter].length > 0 && !matchFilters(filter, filters, product))
+                        return false;
+                }
+                return true;
+            });
+        }
+
+        function matchFilters(filter, filters, data) {
+            if (filter === "price") {
+                let [min, max] = filters.price[0].split("-");
+
+                if (max === "*") return data.price > min;
+
+                else return data.price > min && data.price < max;
+
+            } else if (filter === "rating") {
+                return data.rating >= filters.rating[0];
+            }
+            if (!Array.isArray(data[filter]))
+                return filters[filter].indexOf(data[filter]) !== -1;
+
+            for (let value of data[filter]) {
+                if (filters[filter].indexOf(value) !== -1) return true;
+            }
+
+            return false;
+        }
+
+        function createTemplate(product) {
+            return `
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="product-item mb-3 shop-item" style="width: 100%;">
+                    <div class="product product-filter">
+                        <div class="product-image view zoom overlay rounded z-depth-2">
+                            <img src="${product.image}" alt="" class="img-fluid">
+                            <a href="#">
+                                <div class="mask">
+                                    <img class="img-fluid w-100" src="${product.image}">
+                                    <div class="mask rgba-black-slight"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h6 class="product-name"><a href="product-${product.id}-details.html">${product.name}</a></h6>
+                            <div class="product-price">$${product.price}</div>
+                        </div>
+                        <div class="green-button add-to-cart-button"><a href="#">Add to cart</a></div>
+                    </div>
+                    </div>    
+                </div>
+            `
+
+        }
+
+        function renderProducts(products) {
+            setTimeout(() => {
+                $('#loader').css('display', 'none');
+            }, 1000)
+
+            const template =
+                products.length === 0
+                    ? `<p class="mt-3" style="text-align: center;">No matching results found.</p>`
+                    : products.map((product) => createTemplate(product)).join("\n");
+            $("#products").html(template);
+
+        }
+    </script>
+
+</body>
+
+</html>

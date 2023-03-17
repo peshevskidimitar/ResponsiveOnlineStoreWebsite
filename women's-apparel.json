@@ -1,0 +1,94 @@
+[
+    {
+      "id": 2,
+      "category": "tops",
+      "name": "Women's Spot Printed Top",
+      "rating": 5,
+      "image": "./images/product-2.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "XS",
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "condition": "new",
+      "color": "white",
+      "price": 109.99,
+      "discount": 0
+    },
+    {
+      "id": 5,
+      "category": "shirts",
+      "name": "Women's Casual Brown Shirt",
+      "rating": 5,
+      "image": "./images/product-5.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Small",
+        "Medium",
+        "Large",
+        "XL"
+      ],
+      "condition": "renewed",
+      "color": "brown",
+      "price": 249.99,
+      "discount": 0
+    },
+    {
+      "id": 7,
+      "category": "coats",
+      "name": "Women's Casual White Coat",
+      "rating": 4,
+      "image": "./images/product-7.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "XS",
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "condition": "collectible",
+      "color": "white",
+      "price": 619.99,
+      "discount": 0
+    },
+    {
+      "id": 8,
+      "category": "coats",
+      "name": "Women's Classic Purple Coat",
+      "rating": 5,
+      "image": "./images/product-8.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Medium",
+        "Large"
+      ],
+      "condition": "collectible",
+      "color": "purple",
+      "price": 529.99,
+      "discount": 0
+    },
+    {
+      "id": 13,
+      "category": "shirts",
+      "name": "Women's Casual White Shirt",
+      "rating": 4,
+      "image": "./images/product-13.jpg",
+      "description": "...",
+      "available": true,
+      "size": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "condition": "new",
+      "color": "white",
+      "price": 189.99,
+      "discount": 0
+    }
+  ]

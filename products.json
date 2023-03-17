@@ -1,0 +1,278 @@
+[
+  {
+    "id": 1,
+    "category": "jackets",
+    "name": "Man's Black Leather Jacket",
+    "rating": 4,
+    "image": "./images/product-1.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Medium",
+      "Large",
+      "XL"
+    ],
+    "condition": "new",
+    "color": "black",
+    "price": 519.99,
+    "discount": 80.00
+  },
+  {
+    "id": 2,
+    "category": "tops",
+    "name": "Women's Spot Printed Top",
+    "rating": 5,
+    "image": "./images/product-2.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "XS",
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "condition": "new",
+    "color": "white",
+    "price": 109.99,
+    "discount": 0
+  },
+  {
+    "id": 3,
+    "category": "coats",
+    "name": "Men's Casual Orange Coat",
+    "rating": 5,
+    "image": "./images/product-3.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Medium",
+      "Large",
+      "XL",
+      "XXL"
+    ],
+    "condition": "new",
+    "color": "orange",
+    "price": 719.99,
+    "discount": 0
+  },
+  {
+    "id": 4,
+    "category": "pullovers",
+    "name": "Men's Catchy Pullover",
+    "rating": 4,
+    "image": "./images/product-4.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Medium",
+      "Large",
+      "XL",
+      "XXL"
+    ],
+    "condition": "new",
+    "color": "grey",
+    "price": 219.99,
+    "discount": 0
+  },
+  {
+    "id": 5,
+    "category": "shirts",
+    "name": "Women's Casual Brown Shirt",
+    "rating": 5,
+    "image": "./images/product-5.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Small",
+      "Medium",
+      "Large",
+      "XL"
+    ],
+    "condition": "renewed",
+    "color": "brown",
+    "price": 249.99,
+    "discount": 0
+  },
+  {
+    "id": 6,
+    "category": "shirts",
+    "name": "Men's Slim Fit Casual Shirt",
+    "rating": 3,
+    "image": "./images/product-6.jpg",
+    "description": "...",
+    "available": false,
+    "size": [
+      "Medium",
+      "Large",
+      "XL"
+    ],
+    "condition": "used",
+    "color": "white",
+    "price": 79.99,
+    "discount": 20
+  },
+  {
+    "id": 7,
+    "category": "coats",
+    "name": "Women's Casual White Coat",
+    "rating": 4,
+    "image": "./images/product-7.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "XS",
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "condition": "collectible",
+    "color": "white",
+    "price": 619.99,
+    "discount": 0
+  },
+  {
+    "id": 8,
+    "category": "coats",
+    "name": "Women's Classic Purple Coat",
+    "rating": 5,
+    "image": "./images/product-8.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Medium",
+      "Large"
+    ],
+    "condition": "collectible",
+    "color": "purple",
+    "price": 529.99,
+    "discount": 0
+  },
+  {
+    "id": 9,
+    "category": "shirts",
+    "name": "Kids' Hawaii Floral Shirt",
+    "rating": 1,
+    "image": "./images/product-9.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "condition": "new",
+    "color": "green",
+    "price": 79.99,
+    "discount": 0
+  },
+  {
+    "id": 10,
+    "category": "dresses",
+    "name": "Kids' Cute Brown Dress",
+    "rating": 5,
+    "image": "./images/product-10.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "XS",
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "condition": "new",
+    "color": "brown",
+    "price": 189.99,
+    "discount": 0
+  },
+  {
+    "id": 11,
+    "category": "coats",
+    "name": "Men's Vintage Brown Coat",
+    "rating": 3,
+    "image": "./images/product-11.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Medium",
+      "Large",
+      "XL",
+      "XXL"
+    ],
+    "condition": "used",
+    "color": "brown",
+    "price": 399.99,
+    "discount": 0
+  },
+  {
+    "id": 12,
+    "category": "dresses",
+    "name": "Kids' Vintage Orange Dress",
+    "rating": 5,
+    "image": "./images/product-12.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "XS",
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "condition": "new",
+    "color": "orange",
+    "price": 389.99,
+    "discount": 0
+  },
+  {
+    "id": 13,
+    "category": "shirts",
+    "name": "Women's Casual White Shirt",
+    "rating": 4,
+    "image": "./images/product-13.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "condition": "new",
+    "color": "white",
+    "price": 189.99,
+    "discount": 0
+  },
+  {
+    "id": 14,
+    "category": "dresses",
+    "name": "Kids' Vintage Red Dress",
+    "rating": 4,
+    "image": "./images/product-14.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Small",
+      "Medium"
+    ],
+    "condition": "collectible",
+    "color": "red",
+    "price": 379.99,
+    "discount": 0
+  },
+  {
+    "id": 15,
+    "category": "pullovers",
+    "name": "Kids' Catchy Pink Pullover",
+    "rating": 4,
+    "image": "./images/product-15.jpg",
+    "description": "...",
+    "available": true,
+    "size": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "condition": "collectible",
+    "color": "pink",
+    "price": 239.99,
+    "discount": 0
+  }
+]
