@@ -26,6 +26,6 @@
 
 ![screencapture-127-0-0-1-5500-about-html-2023-05-13-18_25_55](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/456add42-214c-43f3-bfcc-97eb283731e1)
 
-![screencapture-127-0-0-1-5500-contact-html-2023-05-13-18_26_08](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/555bcf8d-2c5b-467e-a9a0-8cf29692b910)
+![screencapture-127-0-0-1-5500-contact-html-2023-05-13-18_29_00](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/c01e7187-e78b-4867-8b7b-3cec215d7c7d)
 
 ![screencapture-127-0-0-1-5500-login-html-2023-05-13-18_26_27](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/8e122b7e-07c0-4736-a8a1-266ae6e8144b)
