@@ -17,3 +17,15 @@
 Во поголемиот дел сите веб страници во рамки на сајтот се составени од компоненти („accordion“, „buttons“, „button group“, „card“, „carousel“, „dropdowns“, „navbar“, „pagination“ итн.) кои ги нуди Bootstrap 5 со што во најголема мера е овозможена респонсивноста на овој веб сајт. При изработка на секоја поединечна страница користен е грид системот што го нуди Bootstrap 5, но исто така при коригирањето на некои детали искористени се „media queries“ кои се одлика на CSS. Додека стилизирањето и севкупниот дизајн целосно се должат на CSS.
 
 Заклучно развивањето на овој проект во најголема мера се потпираше на „frontend“ технологии (HTML, CSS и JavaScript) и на значителнпо искористување на функционалностите и можностите што ги нуди Bootstrap 5 со што беа остварени барањата на проектот.
+
+![screencapture-127-0-0-1-5500-index-html-2023-05-13-18_24_34](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/2a7a0357-870a-4a33-8423-beb4fa9d02c4)
+
+![screencapture-127-0-0-1-5500-shop-html-2023-05-13-18_25_17](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/9d21a68e-e8a8-403e-ba76-be872e487041)
+
+![screencapture-127-0-0-1-5500-blog-html-2023-05-13-18_25_30](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/be238afc-8c66-47ee-bf81-8383403d91fb)
+
+![screencapture-127-0-0-1-5500-about-html-2023-05-13-18_25_55](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/456add42-214c-43f3-bfcc-97eb283731e1)
+
+![screencapture-127-0-0-1-5500-contact-html-2023-05-13-18_26_08](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/555bcf8d-2c5b-467e-a9a0-8cf29692b910)
+
+![screencapture-127-0-0-1-5500-login-html-2023-05-13-18_26_27](https://github.com/peshevskidimitar/ResponsiveOnlineStoreWebsite/assets/85986325/8e122b7e-07c0-4736-a8a1-266ae6e8144b)
